@@ -15,6 +15,7 @@ search.send_keys('Dress')
 
 # wait for 4 sec
 sleep(4)
+# My name is Keesha Evanson
 
 # click search
 driver.find_element(By.NAME, 'btnK').click()
