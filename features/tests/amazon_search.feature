@@ -1,6 +1,7 @@
 # Created by keesh at 5/18/2022
-Feature: # Enter feature name here
-  # Enter feature description here
+#Feature: Test for Amazon search
 
-  Scenario: # Enter scenario name here
-    # Enter steps here
+#  Scenario: Verify that user can search for coffee
+#    Given Open Amazon page
+#    When Search for coffee
+#    Then Verify search results for coffee are shown
