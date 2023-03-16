@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from behave import when, then
 from time import sleep
 
+
 PRODUCT_PRICE = (By.XPATH, "//div[@data-component-type='s-search-result']//a[.//span[@class='a-price']]")
 BESTSELLERS_ICON = (By.CSS_SELECTOR, "a[href='/gp/bestsellers/?ref_=nav_cs_bestsellers']")
 BESTSELLER_LINKS = (By.ID, 'zg_header a')
