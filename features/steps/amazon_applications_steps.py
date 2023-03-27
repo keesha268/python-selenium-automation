@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
 
 PRIVACY_NOTICE = (By.XPATH, "//a[@href='https://www.amazon.com/privacy']")
 
@@ -17,7 +16,7 @@ def store_original_window(context):
     print(context.original_window)
 
 
-@when('Click on Amazon Privacy Notice link')
+@when('Click Amazon Privacy Notice link')
 def click_privacy_link(context):
     context.driver.find_element(*PRIVACY_NOTICE).click()
 
