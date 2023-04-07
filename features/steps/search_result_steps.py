@@ -21,13 +21,16 @@ def verify_search_result(context, expected_result):
 @then('Verify that text {expected_result} is shown')
 def verify_search_result(context, expected_result):
     context.app.search_results_page.verify_search_result(expected_result)
-    # actual_result = context.driver.find_element(By.XPATH, "//span[@class='a-color-state a-text-bold']").text
-    # assert expected_result == actual_result, f'Expected {expected_result} but got actual {actual_result}'
 
 
-@then('Verify {expected_result} text present')
-def verify_cart_empty(context, expected_result):
-    context.app.search_results_page.verify_cart_empty(expected_result)
+@then('Verify books department is selected')
+def verify_selected_dept(context):
+    context.app.search_results_page.verify_selected_dept()
+
+
+@then('Verify appliances department is selected')
+def verify_appliance_dept(context):
+    context.app.search_results_page.verify_appliance_dept()
 
 
 @when('Click on the first product')

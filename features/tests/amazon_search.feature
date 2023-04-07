@@ -1,24 +1,30 @@
-# Resubmitting HW4
 Feature: Amazon search tests
 
-
-  Scenario: Logged out user sees Sign in page when clicking Orders
-     Given Open Amazon page
-     When Click Amazon Orders link
-     Then Verify 'Sign in' page is opened
-
-
-  Scenario: 'Your Shopping Cart is empty' shown if no product added
-     Given Open Amazon page
-     When Click on cart icon
-     Then Verify 'Your Shopping Cart is empty.' text present
-
-
-  Scenario: User can search for table on Amazon
+Scenario: User can select and search in a department
     Given Open Amazon page
-    When Input text table
+    When Select department appliances
+    When Input text toaster
     When Click on search button
-    Then Verify that text "table" is shown
+    Then Verify appliances department is selected
+
+
+#  Scenario: Logged out user sees Sign in page when clicking Orders
+#     Given Open Amazon page
+#     When Click Amazon Orders link
+#     Then Verify 'Sign in' page is opened
+
+
+#  Scenario: 'Your Shopping Cart is empty' shown if no product added
+#     Given Open Amazon page
+#     When Click on cart icon
+#     Then Verify 'Your Shopping Cart is empty.' text present
+#
+#
+#  Scenario: User can search for table on Amazon
+#    Given Open Amazon page
+#    When Input text table
+#    When Click on search button
+#    Then Verify that text "table" is shown
 
 
 #Scenario: User can add a product to the cart
@@ -35,3 +41,11 @@ Feature: Amazon search tests
 #    When Input text coffee
 #    When Click on search button
 #    Then Verify that every product has a name and an image
+
+#  Scenario: User can select and search in a department
+#    Given Open Amazon page
+#    When Select department books
+#    When Input text Faust
+#    When Click on search button
+#    Then Verify books department is selected
+

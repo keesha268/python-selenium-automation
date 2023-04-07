@@ -45,6 +45,26 @@ def click_signin(context):
     context.driver.wait.until(EC.element_to_be_clickable(SIGN_IN_BTN)).click()
 
 
+@when('Hover over language options')
+def hover_lang_options(context):
+    context.app.header.hover_lang_options()
+
+
+@then('Verify Spanish option present')
+def verify_lang_shown(context):
+    context.app.header.verify_lang_shown()
+
+
+@when('Select department books')
+def select_department(context):
+    context.app.header.select_department()
+
+
+@when('Select department appliances')
+def select_dept(context):
+    context.app.header.select_dept()
+
+
 @then('Verify hamburger menu icon present')
 def verify_ham_menu_present(context):
     context.ham_menu = context.driver.find_element(*HAM_MENU)

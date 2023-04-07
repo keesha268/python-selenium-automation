@@ -12,6 +12,21 @@ def open_google(context):
     context.driver.get('https://www.google.com/')
 
 
+@given('Open Amazon product {product_id} page')
+def open_product(context, product_id):
+    context.driver.get(f'https://www.amazon.com/gp/product/{product_id}/')
+
+
+@when('Hover over New Arrivals')
+def hover_new_arrivals(context):
+    context.app.header.hover_new_arrivals()
+
+
+@then('Verify that the user sees the deals')
+def verify_deals_shown(context):
+    context.app.header.verify_deals_shown()
+
+
 @when('Input {search_word} into search field')
 def input_search(context, search_word):
     search = context.driver.find_element(*SEARCH_INPUT)
